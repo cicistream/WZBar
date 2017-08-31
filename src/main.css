@@ -1,0 +1,106 @@
+html, body, div, p, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+ol, ul,li {
+    margin: 0;
+    padding: 0;
+    list-style: none outside none;
+}
+a{
+    text-decoration: none;
+    outline: none;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 396001 */
+  src: url('http://at.alicdn.com/t/font_396001_5km82vazwkaz6w29.eot');
+  src: url('http://at.alicdn.com/t/font_396001_5km82vazwkaz6w29.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_396001_5km82vazwkaz6w29.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_396001_5km82vazwkaz6w29.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_396001_5km82vazwkaz6w29.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:0.46rem;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.bg{
+	width: 100%;
+	height: 14rem;
+	background: url(assets/bg.png) no-repeat;
+	background-size:100% 100%;
+}
+.footer{
+    width: 100%;
+    height: 1rem;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+.footNav{
+    padding-top: 0.06rem;
+    font-size: 0.28rem;
+    color: #888888;
+}
+.router-link-active{
+	color: #4b1d22;
+}
+.kinds .kinds-btn.router-link-active{
+	background-color: #876af7;
+	color: #fff;
+	border: 3px solid #876af7;
+}
+.line{
+    height: 1px;
+    background-color: #ccc;
+}
+.show{
+	display: block !important;
+}
+.black{
+	background-color: #000;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 14rem;
+	border: 2px solid red;
+	z-index: 3;
+}
+.title{
+	color: #646464;
+	line-height: 1rem;
+	letter-spacing: 4px;
+	border-bottom: 2px solid #81d9fa;
+}
+.flex{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.itemActive{
+	color: #fff;
+	background-color: #876af7;
+	border-color: #876af7;
+}
+.sure{
+	font-size: 0.3rem;
+	line-height: 0.74rem;
+	width: 5.12rem;
+	border-radius: 0.1rem;
+}
+body{
+	background-color: #605352;
+}
