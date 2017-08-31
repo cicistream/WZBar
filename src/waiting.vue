@@ -1,6 +1,6 @@
 <template>
 	<div class="waiting" >
-        <div :class="{'black':takeIt}"></div>
+        <div :class="{'black':cancel}" @click="cancelOrnot"></div>
         <div>
     		<div class="gameInfo">
     			<li class="gameDetail">
@@ -34,7 +34,14 @@
     					<span class="area-btn">微信区</span>
     				</div> 
     			</div>
-    			<button class="cancel" @click="cancelGame">取消订单并退款</button>
+    			<button class="cancel" @click="cancelOrnot">取消订单并退款</button>
+                <div class="cancelDialog" :class="{'show':cancel}">
+                    <p>是否确认取消该订单</p>
+                    <div class="flex">
+                        <button @click="cancelGame">确定</button>
+                        <button @click="cancelOrnot">取消</button>
+                    </div>
+                </div>
     		</div>
     		<div class="moreInfo">
     			<p class="more">长按扫码关注<span class="name">【KH电竞】</span>获得实时消息</p>
@@ -54,15 +61,20 @@
 <script>
 	export default{
         mounted:function(){ 
+            this.timeM = this.single(sessionStorage.timeM) ;
+            this.timeS = this.single(sessionStorage.timeS) ;
             setInterval(()=>{
                 this.timeM  = this.single(sessionStorage.timeM) ;
                 this.timeS = this.single(sessionStorage.timeS) ;
-                console.log(this.timeS)
             },1000)
         },
         methods:{
+            cancelOrnot: function(){
+                this.cancel = !this.cancel;
+            },
             cancelGame: function(){
                 sessionStorage.take = false;
+                this.cancel = false;
             },
             single: function(num){
                 return (Array(2).join('0') + num).slice(-2);
@@ -71,6 +83,7 @@
 		data(){
 			return{
                 takeIt: false,
+                cancel:false,
 				timeM:"00",
                 timeS:"00"
 			}
@@ -212,5 +225,34 @@
         width: 3.1rem;
         height: 3.1rem;
         margin: 0.3rem auto;
+    }
+    .cancelDialog{
+        display: none;
+        font-size: 0.3rem;
+        width: 6.3rem;
+        height: 2.9rem;
+        border-radius: 0.1rem;
+        background-color: #fff;
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        padding:0.8rem 0 0;
+    }
+    .cancelDialog button{
+        font-size: 0.3rem;
+        color: #fff;
+        border:none;
+        background-color: #876af7;
+        width: 3.2rem;
+        height: 1rem;
+        border-radius: 0.1rem 0 0 0.1rem;
+        margin-top: 0.71rem;
+    }
+    .cancelDialog button:last-child{
+        color: #949494;
+        background-color: #e6e0fe;
+        border-radius: 0 0.1rem 0.1rem 0;
     }
 </style>

@@ -15,7 +15,6 @@ export default{
     var countDown = 300;
       setInterval(()=>{
           if(countDown==0){
-             alert(0)
              sessionStorage.clear()
           }
           if (countDown>0) {

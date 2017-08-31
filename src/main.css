@@ -104,3 +104,9 @@ a{
 body{
 	background-color: #605352;
 }
+.hidden{
+	display: none;
+}
+button:focus{
+	outline: none;
+}
