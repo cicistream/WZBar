@@ -247,12 +247,12 @@
         background-color: #876af7;
         width: 3.2rem;
         height: 1rem;
-        border-radius: 0.1rem 0 0 0.1rem;
+        border-radius: 0 0 0 0.1rem;
         margin-top: 0.71rem;
     }
     .cancelDialog button:last-child{
         color: #949494;
         background-color: #e6e0fe;
-        border-radius: 0 0.1rem 0.1rem 0;
+        border-radius: 0 0 0.1rem 0;
     }
 </style>

@@ -24,9 +24,9 @@
                 <div class="part" @click="chooseWay(0)" :class="{'active':way==0}"><span class="iconfont wx">&#xe659;</span><br />微信钱包提现</div>
                 <div class="part" @click="chooseWay(1)" :class="{'active':way==1}"><span class="iconfont zfb">&#xe624;</span><br />支付宝提现</div>
             </div>
-            <span style="display:inline-block;position: relative;" :class="{'upbg':!showQR}">
+            <span class="changeBg" :class="{'upbg':!showQR}">
                 <input accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" class="upload" type="file" id="upload" @change="uploadImg">
-                <div class="hidden" :class="{'show':showQR}"><img id="showQR"><br/><p class="reload">重新上传</p></div>
+                <img id="showQR" :class="{'show':showQR}">
             </span>
             <input class="inputMoney" type="text" name="money" placeholder="请输入提现金额">
             <button class="sure itemActive">确认提现</button>
@@ -125,7 +125,7 @@
         font-size: 0.3rem;
         color: #646464;
         width: 6.3rem;
-        height: 8.3rem;
+        height: 7.8rem;
         position: fixed;
         top: 20%;
         left: 50%;
@@ -177,14 +177,21 @@
         opacity: 0;
         font-size: 0.28rem;
         width: 5.1rem;
-        height: 2.6rem;
+        height: 2.2rem;
         margin-bottom: 0.2rem;
     }
+    .changeBg{
+        display:inline-block;
+        position: relative;
+        background:0 url(assets/reload.png) no-repeat;
+        background-size: 100% 100%;
+    }
     #showQR{
-        width: 2rem;
-        height: 2rem;
+        display: none;
+        width: 1.9rem;
+        height: 1.9rem;
         position: absolute;
-        top: 0.3rem;
+        top: 0.1rem;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -197,11 +204,6 @@
     }
     .upbg{
         background:0 url(assets/upload.png) no-repeat;
-        background-size: 100%;
-    }
-    .reload{
-        position: absolute;
-        top: 1.8rem;
-        left: 72%;
+        background-size: 100% 100%;
     }
 </style>

@@ -27,7 +27,7 @@
 	}
 	.kinds .kinds-btn{
 		font-size: 0.3rem;
-		color: #000;
+		color: #301919;
 		width: 1.72rem;
 		line-height: 0.56rem;
 		background-color: rgba(255,255,255,0.3);
