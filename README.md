@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # cici
 
 > A Vue.js project
@@ -32,4 +31,4 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 =======
 # WZBar
 Gang up (vue-cli)
->>>>>>> bb6f7a722554e4130210b2d45fc13ef85432326c
+
